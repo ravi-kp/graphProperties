@@ -54,3 +54,24 @@ int main()
     return 0;
  }
 ```
+# Creating Shared Library
+```
+# Getting the object file
+g++ -fPIC -c -std=c++11 graphProperty.cpp
+
+# Creating the shared .SO library
+gcc -shared -o libgraphProperty.so graphProperty.o
+
+```
+# Using the shared library for an example code
+```
+# Create the executable by linking shared library
+g++ -L/home/ravi/Project/lib/ -Wall -std=c++11 example.cpp -lgraphProperty    ---here /home/ravi/Project/lib/ is path to .SO file
+
+# Make shared library available at runtime
+export LD_LIBRARY_PATH=lib/:$LD_LIBRARY_PATH
+
+#  Run executable
+./a.out
+
+```
