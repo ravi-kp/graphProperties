@@ -1,4 +1,4 @@
-# graphProperties
+# Library for graph properties in C++
 There are many graph properties. but here we provided a library in C++(graphProperty.CPP) that provides few properties of graphs. To execute these functionality, one need to include the header file graphProperty.h. We provided an example.cpp which shows how these properies can be executed.
 
 # Usage
