@@ -2,9 +2,11 @@
 There are many graph properties. but here we provided a library in C++(graphProperty.CPP) that provides few properties of graphs. To execute these functionality, one need to include the header file graphProperty.h. We provided an example.cpp which shows how these properies can be executed.
 
 # Usage
-`
-\#include<bits/stdc++.h>
-\#include<boost/config.hpp>
+We have used the boost libraries for graph generation. See https://cs.brown.edu/~jwicks/boost/libs/graph/doc/quick_tour.html for more detailed documentation.
+```
+
+#include<bits/stdc++.h>
+#include<boost/config.hpp>
 #include<boost/graph/adjacency_list.hpp>
 #include<boost/graph/erdos_renyi_generator.hpp>
 #include<boost/random/linear_congruential.hpp>
@@ -51,5 +53,4 @@ int main()
     
     return 0;
  }
-`
-
+```
