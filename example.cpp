@@ -41,7 +41,7 @@ int main()
     cout<<endl;
     cout<<"The graph is connected: "<<isConnected(g);
     cout<<endl;
-    cout<<"The graphs contains two edges between the same vertex (in forward and backward direction): "<<loopEdgeExist(g);
+    cout<<"The graphs contains two edges between the same vertex (in forward and backward direction): "<<doesLoopEdgeExist(g);
     cout<<endl;
     
     return 0;
