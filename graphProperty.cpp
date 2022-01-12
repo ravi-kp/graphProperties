@@ -36,8 +36,8 @@ bool isConnected(Graph g)
 
 
 //Function to check whether there is a path between two vertices or not.
-bool isPath(int src, int dest,int n,Graph g) {
-  bool visited[n] = {false};
+bool isPath(int src, int dest,int num_vertices, Graph g) {          //num_vertices--> number of vertices in graph g.
+  bool visited[num_vertices] = {false};
   visited[src] = true;
   std::stack<int> next;
   next.push(src);
@@ -46,7 +46,7 @@ bool isPath(int src, int dest,int n,Graph g) {
     int u = next.top();
     next.pop();
 
-    for (int v = 0; v<n; ++v) {
+    for (int v = 0; v<num_vertices; ++v) {
       if (!visited[v] &&  edge(u,v,g).second==true) {
         visited[v] = true;
         next.push(v);
@@ -58,7 +58,7 @@ bool isPath(int src, int dest,int n,Graph g) {
 
 
 //Function to check if the graph contains two edges between the same vertex (in forward and backward direction) i.e. (x->y and y->x)
-bool loopEdgeExist(Graph g)
+bool doesLoopEdgeExist(Graph g)
 {
   auto epair=edges(g);
   for(auto itr1=epair.first;itr1!=epair.second;itr1++)
